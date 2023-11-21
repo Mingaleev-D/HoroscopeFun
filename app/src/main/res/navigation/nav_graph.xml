@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:id="@+id/nav_graph"
+   app:startDestination="@id/homeFragment">
+
+   <fragment
+      android:id="@+id/homeFragment"
+      android:name="com.example.horoscopefun.ui.view.home.HomeFragment"
+      android:label="fragment_home"
+      tools:layout="@layout/fragment_home" >
+      <action
+         android:id="@+id/action_homeFragment_to_detailActivity"
+         app:destination="@id/detailActivity" />
+   </fragment>
+   <fragment
+      android:id="@+id/luckFragment"
+      android:name="com.example.horoscopefun.ui.view.luck.LuckFragment"
+      android:label="fragment_luck"
+      tools:layout="@layout/fragment_luck" />
+   <fragment
+      android:id="@+id/paimistryFragment"
+      android:name="com.example.horoscopefun.ui.view.paimistry.PaimistryFragment"
+      android:label="fragment_paimistry"
+      tools:layout="@layout/fragment_paimistry" />
+   <activity
+      android:id="@+id/detailActivity"
+      android:name="com.example.horoscopefun.ui.view.detail.DetailActivity"
+      android:label="activity_detail"
+      tools:layout="@layout/activity_detail" >
+      <argument
+         android:name="type"
+         app:argType="string" />
+   </activity>
+</navigation>
